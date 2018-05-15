@@ -1,0 +1,55 @@
+{
+  "name": "Hass.io MQTT MDNS",
+  "version": "0.0.1",
+  "slug": "mqqtmdns",
+  "description": "mdns support for mqtt using HASS.io",
+  "url": "https://github.com/cybertza/hassio-addons",
+  "startup": "application",
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "i386"
+  ],
+  "boot": "auto",
+  "hassio_api": true,
+  "homeassistant_api": true,
+  "host_network": true,
+  "privileged": [],
+  "map": [
+    "config:rw",
+    "ssl"
+  ],
+  "options": {
+    "log_level": "info",
+    "avahi_interfaces": "",
+    "avahi_hostname": "",
+    "avahi_domainname": "local",
+    "enable_ipv6": true,
+    "insecure": false,
+    "packages": [],
+    "init_commands": [],
+    "plugins": []
+  },
+  "schema": {
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
+    "avahi_interfaces": "str",
+    "avahi_hostname": "str",
+    "avahi_domainname": "str",
+    "enable_ipv6": "bool",
+    "insecure": "bool",
+    "packages": [
+      "str"
+    ],
+    "init_commands": [
+      "str"
+    ],
+    "plugins": [
+      "str"
+    ]
+  },
+  "environment": {
+    "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
+  },
+  "image": "hassioaddons/homebridge-{arch}"
+}
