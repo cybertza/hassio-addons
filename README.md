@@ -3,7 +3,7 @@
 
 My repository for [Hass.io](https://home-assistant.io/hassio/) add-ons.
 
-* [Mdns](https://github.com/CyberTza/hassio-addons/Mdns)
+* [Mdns](https://github.com/cybertza/hassio-addons/tree/master/Mdns)
 
 
 ## Installation
